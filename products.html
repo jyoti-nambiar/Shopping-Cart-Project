@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script>
+    //function for adding cart items to local storage
+    function addCartFunc(id) {
+
+        let items = [];
+        let currentProduct = JSON.parse(localStorage.getItem("ourProducts"));
+        for (var i = 0; i < currentProduct.length; i++) {
+            if (id == currentProduct[i].id) {
+                let item = {
+                    id: currentProduct[i].id,
+                    name: currentProduct[i].itemName,
+                    price: currentProduct[i].price,
+                    imgSrc: currentProduct[i].imgSrc,
+                    quantity: 1
+                };
+
+                items.push(item);
+                if (JSON.parse(localStorage.getItem("productInCart")) === null) {
+                    localStorage.setItem("productInCart", JSON.stringify(items));
+                    window.location.reload();
+
+                } else {
+                    const localItem = JSON.parse(localStorage.getItem("productInCart"));
+                    localItem.map(data => {
+                        if (item.id == data.id) {
+                            item.quantity = data.quantity + 1;
+                        } else {
+                            items.push(data);
+                        }
+                    });
+
+                    localStorage.setItem("productInCart", JSON.stringify(items));
+
+                    window.location.reload();
+
+                }
+
+
+
+            }
+
+        }
+
+    }
+
+    /*------Delete function to delete individual item from cart-------------------------------------------*/
+
+    function Delete(id) {
+        let currentProducts = JSON.parse(localStorage.getItem("productInCart"));
+        let cartItemId = id.parentElement.children[0].textContent;
+
+
+        for (var i = 0; i < currentProducts.length; i++) {
+            if (cartItemId == currentProducts[i].id) {
+                currentProducts.splice(i, 1);
+                localStorage.setItem("productInCart", JSON.stringify(currentProducts));
+                location.reload();
+
+            }
+        }
+    }
+
+
+    /*------function to change the quantity of item in cart-------------------------------------------*/
+    function upQuantity(id) {
+        let currentProducts = JSON.parse(localStorage.getItem("productInCart"));
+
+        for (let i = 0; i < currentProducts.length; i++) {
+            if (id == currentProducts[i].id) {
+
+                var quantity_input_change = parseInt(document.getElementById('quantity_input_' + i).value);
+
+                if (quantity_input_change <= 0) {
+
+                    currentProducts.splice(i, 1);
+                    localStorage.setItem("productInCart", JSON.stringify(currentProducts));
+                    window.location.reload();
+
+
+                } else {
+                    currentProducts[i].quantity = quantity_input_change;
+                    localStorage.setItem("productInCart", JSON.stringify(currentProducts));
+                    window.location.reload();
+                }
+
+            }
+        }
+    }
+
+</script>
+
+<script src="dynamicProduct.js"></script>
+<script src="main.js" defer></script>
+
+<body>
+    <!-- Hamburger menu using html and css -->
+    <nav class="shadow">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            &#9776;
+        </label>
+        <img class="logo-style" src="images/cake.png" alt="">
+        <label class="logo">Piece of cake</label>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="addProduct.html">addProduct</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="cart-info" href="#cart">
+                    <span class="item-total">0</span>
+                    <i class="fas fa-cart-plus"></i>Cart
+                    <span class="cart-total"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger menu end -->
+    <!--cart div -->
+    <div id="cart" class="cart">
+
+        <i class="far fa-times-circle"></i>
+        <h2>Your Cart</h2>
+
+
+        <!--Cartitems will be dynamically added here-->
+
+        <div class="cart-total-container">
+            <h5>total: </h5>
+            <h5> $ <strong id="cart-total" class="font-weight-bold">0</strong> </h5>
+        </div>
+        <!--end cart total -->
+        <!-- cart buttons -->
+        <div class="cart-buttons-container ">
+            <a href="#" id="clear-cart" class="btn btn-outline-secondary text-uppercase btn-pink">clear cart</a>
+            <a href="#" id="checkout" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+        </div>
+    </div>
+
+    <!--End of cart div-->
+
+
+    <!--Card Section-->
+
+
+    <section>
+        <div class="card-containers">
+
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>

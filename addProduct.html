@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add products </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+
+    <script src="dynamicProduct.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Hamburger menu using html and css -->
+    <nav class="shadow">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            &#9776;
+        </label>
+        <img class="logo-style" src="images/cake.png" alt="">
+        <label class="logo">Piece of cake</label>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="addProduct.html">addProduct</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="display:none;"><a id="cart-info" href="#cart">
+                    <span class="item-total">0</span>
+                    <i class="fas fa-cart-plus"></i>Cart
+                    <span class="cart-total"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Hamburger menu end -->
+    <section class="dynamicProductSection">
+        <div class="wrapper">
+            <h2 class="bg bg1">Add New Products</h2>
+            <form id="form">
+
+                <label for="itemName">Item Name:</label>
+                <input type="text" placeholder="Item Name" id="itemName" class=itemName>
+
+                <label for="itemPrice">Item Price:</label>
+                <input type="text" placeholder="Item Price" id="itemPrice">
+                <label style="display:none;" for="itemPrice">Item id:</label>
+                <input style="display:none;" type="text" placeholder="Item id" id="itemid">
+
+
+                <button id="chooseImg"> Choose Image </button> <br>
+
+
+
+                <button id="addBtn">Add Items</button>
+                <button id="updateBtn">Update Item</button>
+
+            </form>
+        </div>
+    </section>
+
+    <div id="apiImageDiv" class="apiImageDiv">
+        <i class="far fa-times-circle"></i>
+
+
+
+    </div>
+
+
+
+    <section>
+        <h2 style="display:none;">Our Products</h2>
+        <div class="card-containers">
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Muffins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TamannaSarker/Muffins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TamannaSarker/Muffins/issues"
+  },
+  "homepage": "https://github.com/TamannaSarker/Muffins#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

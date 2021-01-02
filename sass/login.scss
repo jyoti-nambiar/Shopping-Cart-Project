@@ -1,0 +1,55 @@
+/* -------------------------- Login page --------------------- */
+
+.loginBox{
+    width: 300px;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loginBox h1{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#username, #password{
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid pink;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+#username:focus, #password:focus{
+    width: 270px;
+    border-color: plum;
+}
+
+.loginBox button{
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid pink;
+    padding: 14px 25px;
+    background-color: white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+.loginBox button:hover{
+    background: pink;
+
+}
+
+/* -------------------------- Login page end ----------------- */

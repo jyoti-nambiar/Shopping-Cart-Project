@@ -1,0 +1,83 @@
+.container{
+    margin: 70px;
+    display: flex;
+}
+
+section.about {
+    background: white;
+}
+
+/**/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.row > div{
+    flex-basis: 30rem;
+}
+.img1-style{
+    height: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.half-width{
+    padding: 40px;
+    margin-left: 30px;
+}
+
+    /* Sign in*/
+.sign-in-part{ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff69b4;
+    color: white;
+    padding: 50px;
+}
+
+
+    
+    .sign-in{
+        margin-left: 50px;
+    }
+    .sign-in input{
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+        border-radius: 30px;
+        margin-bottom: 7px;
+    }
+    .sign-in button{  
+		background-color: #9a3769;
+		color: white;
+		font-size: 12px;
+		padding: 7px 10px 6px;
+		border-radius: 3px;
+		border: none; 
+    }
+    
+
+
+    /*footer*/
+
+    .bttn{
+        border: none;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        
+    }
+    footer{
+        background-color: #581637;
+        color: white; 
+        text-align: center;
+        padding: 20px;
+    }
+    .subscribe h2 {
+    	padding-bottom: 5px;
+	}
+    

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CupCakes</title>
+    <link rel="icon" href="images/logo-1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Hamburger menu using html and css -->
+    <nav class="shadow">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            &#9776;
+        </label>
+        <img class="logo-style" src="images/cake.png" alt="">
+        <label class="logo">Piece of cake</label>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li style="display:none;"><a href="addProduct.html">OtherProduct</a></li>
+            <li style="display:none;"><a href="#about">About</a></li>
+            <li style="display:none;"><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+
+            <li style="display:none;"><a id="cart-info" href="#cart">
+                    <span class="item-total">0</span>
+                    <i class="fas fa-cart-plus"></i>Cart
+                    <span class="cart-total"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger menu end -->
+
+    <header class="banner" id="banner">
+        <div class="content">
+            <h2>There is one special <span class="cake-style-color">cake</span> for everyone</h2>
+        </div>
+    </header>
+
+    <!--cart div -->
+    <div id="cart" class="cart">
+
+        <i class="far fa-times-circle"></i>
+        <h2>Your Cart</h2>
+
+
+        <!--Cartitems will be dynamically added here-->
+
+        <div class="cart-total-container">
+            <h5>total: </h5>
+            <h5> $ <strong id="cart-total" class="font-weight-bold">0</strong> </h5>
+        </div>
+        <!--end cart total -->
+        <!-- cart buttons -->
+        <div class="cart-buttons-container ">
+            <a href="#" id="clear-cart" class="btn btn-outline-secondary text-uppercase btn-pink">clear cart</a>
+            <a href="#" id="checkout" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+        </div>
+
+    </div>
+
+    <!--End of login div-->
+
+
+    <!--All cart info is in cart.html-->
+    <!--About-->
+    <section class="about">
+        <div class="row">
+            <div>
+                <img class="img1-style" src="images/mycake.jpg" alt="">
+            </div>
+            <div class="half-width">
+                <h2>
+                    About Us
+                </h2>
+                <p>
+                    Welcome to the world of CupCakes. Choose from our delicious range of all
+                    type of cupcakes uniquely baked for you and your special moments.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--Subscribtion-->
+    <section class="sign-in-part">
+
+
+
+        <div class="subscribe">
+            <h2>Subscribe</h2>
+            <small>Sing up with your email address to recives news and updates.</small>
+        </div>
+        <div class="sign-in">
+            <input type="text" placeholder="Email Address">
+            <button class="link-button-1">SIGN UP</button>
+            <br>
+            <small>We respect your privacy.</small>
+        </div>
+
+
+    </section>
+
+
+    <!--footer-->
+    <footer>
+        <small>© 2020. Piece of cake Website. All rights reserved. Stockholm, Sweden.</small>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

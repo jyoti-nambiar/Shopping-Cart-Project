@@ -1,0 +1,143 @@
+.wrapper{
+
+    margin-top:50px ;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.card{
+    width: 330px;
+    margin: 50px 30px;
+    box-sizing: border-box;
+    border-radius: 5px; 
+    text-align: center; 
+    background: #dad6d6;
+    padding-bottom:15px;  
+}
+.img-style{
+    width: 100%;
+    height: 250px;
+    border-radius: 3px;
+    }
+.card-body .card-title{
+    padding: 20px 5px 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444; 
+    
+}
+.card-body .card-desc{
+    color: #333333; 
+}
+.card-desc h5{
+    margin: 10px;
+    font-size: 2em;
+}
+     
+.card-containers{
+    padding-top: 50px;
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 10px;
+
+}
+
+.btn-disable{
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #0f0f0f;
+    background-color: #08f356;
+    content:"In Cart"
+
+}
+
+
+.imgSource{
+
+    display:none;
+    
+}
+
+
+.product-price-style {
+    font-size: 14px;
+    background: pink;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: black;
+    margin-left: 9rem;
+    font-weight: bold;
+}
+
+.remove-button{
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.remove-button:hover{
+    background-color:navajowhite;
+    color: white;
+    transition: 0.5s;
+}
+
+.link-button{
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.link-button:hover{
+    
+    background-color:navajowhite;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*images from API*/
+.apiImages{
+
+position:relative;
+}
+
+
+
+.card-highlight{
+
+    border:2px solid #00ff00;
+}
+
+.apiImageDiv{
+    position: absolute;
+    min-height: 10rem;
+    top: 70px;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    width: 0;
+    overflow:auto;
+    /* z-index:1; */
+   
+  }
+  .show-apiImageDiv {
+    position: fixed;
+    width: 30rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+    cursor: pointer;
+    overflow:auto;
+    height: 300px;
+  }
+
+
+/*End of images from API*/

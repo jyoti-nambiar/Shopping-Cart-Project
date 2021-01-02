@@ -1,0 +1,558 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+/*navbar*/
+nav {
+  /* position: fixed; --Only temporary-- */
+  background-color: #ffffff;
+  height: 80px;
+  width: 100%; }
+
+label.logo {
+  color: #fcd7a7;
+  font-size: 20px;
+  line-height: 80px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+img.logo-style {
+  height: 50px;
+  width: auto;
+  margin: 15px 20px;
+  float: left; }
+
+nav ul {
+  float: right;
+  margin-right: 20px; }
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px; }
+
+nav ul li a {
+  color: #222222;
+  font-size: 14px;
+  padding: 7px 13px;
+  text-transform: uppercase; }
+
+/*
+a:active, a:hover{
+    background-color:hotpink;
+    color: white;
+    letter-spacing: 6px;
+    transition: 0.5s;
+}
+*/
+.checkbtn {
+  font-size: 30px;
+  color: #333333;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none; }
+
+#check {
+  display: none; }
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 25px;
+    position: absolute; }
+  .banner .content h2 {
+    font-size: 5em; }
+  nav ul li a {
+    font-size: 14px; } }
+
+@media (max-width: 952px) {
+  .checkbtn {
+    display: block; }
+  ul {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: wheat;
+    left: -100%;
+    text-align: center;
+    transition: all .5s; }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    width: 100%; }
+  nav ul li a {
+    font-size: 14px; }
+  a:hover, a:active {
+    background-color: none;
+    color: white; }
+  #check:checked ~ ul {
+    left: 0; } }
+
+.banner {
+  width: 100%;
+  min-height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/cakes-blurred.jpg);
+  background-size: cover; }
+
+.banner .content {
+  max-width: 900px;
+  text-align: center; }
+
+.banner .content h2 {
+  font-size: 1.5em;
+  background: white;
+  padding: 10px;
+  color: #ff69b4;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 15px #fdfdfd; }
+
+.cake-style-color {
+  color: #fcd7a7;
+  text-shadow: 5px 5px 15px #fdfdfd; }
+
+.banner .content p {
+  font-size: 1em; }
+
+.btn {
+  font-size: 1em;
+  color: white;
+  background-color: hotpink;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s; }
+
+.btn:hover {
+  letter-spacing: 6px; }
+
+/* -------------------------- Login page --------------------- */
+.loginBox {
+  width: 300px;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.loginBox h1 {
+  text-transform: uppercase;
+  font-weight: 700; }
+
+#username, #password {
+  border: 0;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid pink;
+  padding: 14px 10px;
+  width: 220px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25px; }
+
+#username:focus, #password:focus {
+  width: 270px;
+  border-color: plum; }
+
+.loginBox button {
+  border: 0;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid pink;
+  padding: 14px 25px;
+  background-color: white;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25px;
+  cursor: pointer; }
+
+.loginBox button:hover {
+  background: pink; }
+
+/* -------------------------- Login page end ----------------- */
+/*cart*/
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  top: 80px;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: white;
+  width: 0;
+  overflow-y: auto;
+  z-index: 1; }
+
+.show-cart {
+  position: fixed;
+  width: 30rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+  cursor: pointer;
+  overflow-y: scroll; }
+
+.fa-times-circle {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.cart h2 {
+  text-align: center; }
+
+.img-fluid {
+  width: 75px;
+  height: 70px;
+  border-radius: 5%;
+  padding-bottom: 10px; }
+
+.cart-item {
+  padding: 10px;
+  transition: all 2s ease-in-out;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  column-gap: 2%;
+  grid-template-rows: 120px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  height: 350px; }
+
+.item-text {
+  text-transform: capitalize; }
+
+.cart-item input {
+  height: 20px; }
+
+/* end of cart */
+/* cart item */
+.cart-item-remove {
+  color: #ef7998;
+  transition: all 1s ease-in-out; }
+
+.cart-item-remove:hover {
+  transform: scale(1.1);
+  color: #000; }
+
+#cart-item-price {
+  font-size: 0.8rem; }
+
+.cart-total-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cart-buttons-container {
+  display: flex;
+  justify-content: space-between; }
+
+.cart-buttons-container a {
+  margin: 10px; }
+
+.wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px; }
+
+.card {
+  width: 330px;
+  margin: 50px 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  background: #dad6d6;
+  padding-bottom: 15px; }
+
+.img-style {
+  width: 100%;
+  height: 250px;
+  border-radius: 3px; }
+
+.card-body .card-title {
+  padding: 20px 5px 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #444; }
+
+.card-body .card-desc {
+  color: #333333; }
+
+.card-desc h5 {
+  margin: 10px;
+  font-size: 2em; }
+
+.card-containers {
+  padding-top: 50px;
+  box-sizing: border-box;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 10px; }
+
+.btn-disable {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #0f0f0f;
+  background-color: #08f356;
+  content: "In Cart"; }
+
+.imgSource {
+  display: none; }
+
+.product-price-style {
+  font-size: 14px;
+  background: pink;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: black;
+  margin-left: 9rem;
+  font-weight: bold; }
+
+.remove-button {
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px; }
+
+.remove-button:hover {
+  background-color: navajowhite;
+  color: white;
+  transition: 0.5s; }
+
+.link-button {
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px; }
+
+.link-button:hover {
+  background-color: navajowhite;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer; }
+
+/*images from API*/
+.apiImages {
+  position: relative; }
+
+.card-highlight {
+  border: 2px solid #00ff00; }
+
+.apiImageDiv {
+  position: absolute;
+  min-height: 10rem;
+  top: 70px;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: white;
+  width: 0;
+  overflow: auto;
+  /* z-index:1; */ }
+
+.show-apiImageDiv {
+  position: fixed;
+  width: 30rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+  cursor: pointer;
+  overflow: auto;
+  height: 300px; }
+
+/*End of images from API*/
+.container {
+  margin: 70px;
+  display: flex; }
+
+section.about {
+  background: white; }
+
+/**/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.row > div {
+  flex-basis: 30rem; }
+
+.img1-style {
+  height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  margin-left: 30px; }
+
+.half-width {
+  padding: 40px;
+  margin-left: 30px; }
+
+/* Sign in*/
+.sign-in-part {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff69b4;
+  color: white;
+  padding: 50px; }
+
+.sign-in {
+  margin-left: 50px; }
+
+.sign-in input {
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  border-radius: 30px;
+  margin-bottom: 7px; }
+
+.sign-in button {
+  background-color: #9a3769;
+  color: white;
+  font-size: 12px;
+  padding: 7px 10px 6px;
+  border-radius: 3px;
+  border: none; }
+
+/*footer*/
+.bttn {
+  border: none;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+footer {
+  background-color: #581637;
+  color: white;
+  text-align: center;
+  padding: 20px; }
+
+.subscribe h2 {
+  padding-bottom: 5px; }
+
+/* Contact site*/
+.contact {
+  padding-top: 90px; }
+
+.contact h2 {
+  text-align: center; }
+
+.contact-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px; }
+
+input {
+  padding: 10px; }
+
+button#chooseImg {
+  padding: 10px;
+  background: #fbd7a7;
+  border: 1px solid #fbd7a7;
+  border-radius: 30px; }
+
+button#addBtn, #updateBtn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fbd7a7;
+  border: 1px solid #fbd7a7;
+  border-radius: 30px; }
+
+.remove-item-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 30px;
+  background: #e62535;
+  color: white; }
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px; }
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px; }
+
+textarea {
+  resize: vertical; }
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  color: hotpink;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color; }
+
+button[type="submit"]:hover {
+  background-color: #d6e2ec; }
+
+.checkoutContainer {
+  border: solid 2px white;
+  max-width: 400px;
+  margin-top: 1rem; }
+
+.checkout {
+  padding-top: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  padding-bottom: 10px;
+  justify-content: center;
+  border: 4px solid #fbd7a7;
+  max-width: 300px;
+  margin-left: 3rem;
+  margin-top: 3rem; }
+
+.checkout-card {
+  padding-bottom: 20px;
+  margin-left: 4rem; }
+
+.download-pdf {
+  padding: 10px;
+  background: #fbd7a7;
+  border: 1px solid #fbd7a7;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 8rem; }
+
+.checkout-title {
+  font-weight: bold; }
+
+.cart-total-container h5 {
+  font-size: large; }

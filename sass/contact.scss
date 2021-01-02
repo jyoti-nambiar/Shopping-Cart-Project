@@ -1,0 +1,84 @@
+/* Contact site*/
+
+.contact{
+    padding-top: 90px;
+  }
+
+  .contact h2{
+      text-align: center;
+  }
+  .contact-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 10px;
+}
+
+button#chooseImg {
+    padding: 10px;
+    background: #fbd7a7;
+    border: 1px solid #fbd7a7;
+    border-radius: 30px;
+}
+
+
+  button#addBtn,#updateBtn {
+    margin-top:10px;
+    padding: 10px;
+    background: #fbd7a7;
+    border: 1px solid #fbd7a7;
+    border-radius: 30px;
+}
+
+.remove-item-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 30px;
+    background: #e62535;
+    color: white;
+}
+
+
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: hotpink;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease background-color;
+  }
+  button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+  }
+  
